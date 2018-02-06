@@ -5,7 +5,7 @@
   <groupId>com.hdw</groupId>
   <artifactId>DesignPatternAndAlgorithm</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>DesignPatternAndAlgorithm</name>
   <url>http://maven.apache.org</url>
@@ -13,6 +13,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <modules>
+    <module>designPattern</module>
+    <module>algorithm</module>
+  </modules>
 
   <dependencies>
     <dependency>
