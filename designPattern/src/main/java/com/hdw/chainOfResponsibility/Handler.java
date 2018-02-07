@@ -1,4 +1,4 @@
-package com.hdw.ChainOfResponsibility;
+package com.hdw.chainOfResponsibility;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

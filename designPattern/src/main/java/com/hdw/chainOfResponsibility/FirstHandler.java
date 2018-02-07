@@ -1,4 +1,4 @@
-package com.hdw.ChainOfResponsibility;
+package com.hdw.chainOfResponsibility;
 
 /**
  * 类似于netty消息传递的责任链。

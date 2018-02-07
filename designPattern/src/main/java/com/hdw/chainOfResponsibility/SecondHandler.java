@@ -1,4 +1,4 @@
-package com.hdw.ChainOfResponsibility;
+package com.hdw.chainOfResponsibility;
 
 /**
  * user:hudawei1
