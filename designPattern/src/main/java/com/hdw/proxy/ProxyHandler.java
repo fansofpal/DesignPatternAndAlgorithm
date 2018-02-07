@@ -35,7 +35,9 @@ public class ProxyHandler implements InvocationHandler{
 
 
     /**
-     *
+     * aop的实现一定出现在invoke方法里
+     * 执行原接口的增强实现类方法的时候，一定会执行invoke方法,其中method.invoke就是执行了原对象的方法。
+     * 可以在method前和后写代码来完成aop功能。
      * @return
      * @throws Throwable
      */
