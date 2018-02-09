@@ -1,16 +1,16 @@
-package com.hdw.chainOfResponsibility;
+package com.hdw.chainOfResponsibility.baseDemo;
 
 /**
  * user:hudawei1
  * date:2018/2/7
  * time:11:29
  */
-public class ThirdHandler extends Handler{
+public class SecondHandler extends Handler{
 
     @Override
     public void handle(Object obj) {
         String mes = (String)obj;
-        mes += "ThirdHandler负责关上冰箱门；";
+        mes += "SecondHandler负责把大象推进冰箱；";
         super.handle(mes);
     }
 }
