@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 /**
+ * 冒泡排序（交换型）
  * user:hudawei1
  * date:2018/4/17
  * time:20:49
