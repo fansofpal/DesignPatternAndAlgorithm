@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 /**
+ * 相邻两个元素交换位置，外层从前往后，内层从后往前。
  * 冒泡排序（交换型）
  * user:hudawei1
  * date:2018/4/17

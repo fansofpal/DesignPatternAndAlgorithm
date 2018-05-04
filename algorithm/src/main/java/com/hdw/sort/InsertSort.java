@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import static com.hdw.sort.BaseArray.randomArrays;
 
 /**
+ * 每个节点跟前面的元素比较，如果比元素小，则插入它的位置；后面的元素依次移动一个。
+ * 类似于插扑克牌
  * 插入排序（插入型）
  * user:hudawei1
  * date:2018/5/2
