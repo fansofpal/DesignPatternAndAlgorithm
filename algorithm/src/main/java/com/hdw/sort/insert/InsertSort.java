@@ -1,9 +1,8 @@
-package com.hdw.sort;
+package com.hdw.sort.insert;
 
+import com.hdw.sort.BaseArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static com.hdw.sort.BaseArray.randomArrays;
 
 /**
  * 每个节点跟前面的元素比较，如果比元素小，则插入它的位置；后面的元素依次移动一个。
@@ -13,7 +12,7 @@ import static com.hdw.sort.BaseArray.randomArrays;
  * date:2018/5/2
  * time:16:08
  */
-public class InsertSort {
+public class InsertSort extends BaseArray{
 
     private static final Logger log = LoggerFactory.getLogger(InsertSort.class);
 
