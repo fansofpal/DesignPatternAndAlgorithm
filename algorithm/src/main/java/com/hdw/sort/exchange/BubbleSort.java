@@ -1,5 +1,6 @@
-package com.hdw.sort;
+package com.hdw.sort.exchange;
 
+import com.hdw.sort.BaseArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +13,7 @@ import java.util.Arrays;
  * date:2018/4/17
  * time:20:49
  */
-public class BubbleSort extends BaseArray{
+public class BubbleSort extends BaseArray {
     private static final Logger log = LoggerFactory.getLogger(BubbleSort.class);
 
 
