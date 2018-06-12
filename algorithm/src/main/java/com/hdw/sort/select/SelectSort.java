@@ -1,9 +1,8 @@
-package com.hdw.sort;
+package com.hdw.sort.select;
 
+import com.hdw.sort.BaseArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static com.hdw.sort.BaseArray.randomArrays;
 
 /**
  * 简单选择排序
@@ -12,7 +11,7 @@ import static com.hdw.sort.BaseArray.randomArrays;
  * date:2018/5/4
  * time:9:41
  */
-public class SelectSort {
+public class SelectSort extends BaseArray{
     private static final Logger log = LoggerFactory.getLogger(SelectSort.class);
 
     public static void main(String[] args){
