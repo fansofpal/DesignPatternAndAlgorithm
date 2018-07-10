@@ -90,6 +90,8 @@ public class SnowflakeIdWorker {
 
         //如果是同一时间生成的，则进行毫秒内序列
         if (lastTimestamp == timestamp) {
+            //跟最大值&：所有小于等于最大值的数字还是本身；超过最大值时，(max+1)&max=0
+            //例如：sequenceMask=0000 1111， max+1=0001 0000. &结果=0
             sequence = (sequence + 1) & sequenceMask;
             //毫秒内序列溢出
             if (sequence == 0) {
