@@ -24,8 +24,8 @@ public class ProxyHandler implements InvocationHandler{
 
 
     /**
-     * 这个bind方法是独立存在的，作用是：将要代理的对象的接口、类加载器、代理类，这三样东西绑定起来！
-     * 返回一个增强版的代理对象的接口的实现类！
+     * 这个bind方法是独立存在的，作用是：将原对象的接口、类加载器、ProxyHandler对象，这三样东西绑定起来！
+     * 返回一个实现了原对象接口的增强对象！
      * @param tar
      * @return
      */
