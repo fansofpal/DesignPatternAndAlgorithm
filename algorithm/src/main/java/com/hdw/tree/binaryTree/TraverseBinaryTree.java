@@ -1,5 +1,7 @@
 package com.hdw.tree.binaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -27,7 +29,9 @@ public class TraverseBinaryTree {
 //        preOrder2(headTreeNode);
 //        midOrder(headTreeNode);
 //        midOrder2(headTreeNode);
-        postOrder(headTreeNode);
+//        postOrder(headTreeNode);
+//        System.out.println(getDept(headTreeNode));
+        leverlOrder(headTreeNode);
     }
 
 
@@ -120,6 +124,46 @@ public class TraverseBinaryTree {
      */
     public static void postOrder2(TreeNode treeNode){
 
+
+
+
+    }
+
+    /**
+     * 求树的深度
+     * @param treeNode
+     */
+    public static int getDept(TreeNode treeNode){
+        if(treeNode == null){
+            return 0;
+        }
+
+        int leftDept = getDept(treeNode.getLeftTreeNode());
+        int rightDept = getDept(treeNode.getRightTreeNode());
+
+        return leftDept>rightDept?leftDept+1:rightDept+1;
+    }
+
+
+    /**
+     * 层序遍历树
+     */
+    public static void leverlOrder(TreeNode treeNode){
+        if(treeNode == null){
+            return;
+        }
+        Queue<TreeNode> queue = new LinkedList();
+        queue.add(treeNode);
+        while(!queue.isEmpty()){
+           TreeNode tempNode = queue.poll();
+           System.out.println(tempNode.getName());
+           if(tempNode.getLeftTreeNode() != null){
+               queue.add(tempNode.getLeftTreeNode());
+           }
+           if(tempNode.getRightTreeNode() != null){
+               queue.add(tempNode.getRightTreeNode());
+           }
+        }
 
 
 
