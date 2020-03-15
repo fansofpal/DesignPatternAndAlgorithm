@@ -13,33 +13,32 @@ import java.util.Arrays;
  */
 public class BinarySearch extends BaseArray{
     private static final Logger log = LoggerFactory.getLogger(BinarySearch.class);
-    static int targetNum = 9;
+    static int targetNum = 11;
 
 
     public static void binarySearch(){
 //        int[] orderedArrays = new int[]{0,1,2,3};
         log.info("原数组：{}",Arrays.toString(orderedArrays));
-        int targetPos = search2(0,orderedArrays.length-1,orderedArrays);
+//        int targetPos = search(0,orderedArrays.length-1,orderedArrays);
+        int targetPos = search3(orderedArrays,targetNum,0,orderedArrays.length-1);
         log.info("目标值的位置：{}",targetPos);
 
     }
 
     public static int search(int low,int high,int[] orderedArrays){
-        int pos = -1;
-        if(high-low==1){
-            return pos;
+        if(orderedArrays[low] > targetNum || orderedArrays[high] < targetNum || low >= high){
+            return -1;
         }
         int mid = (low + high)/2;
         if(orderedArrays[mid] > targetNum){
             high = mid;
-            pos = search(low,high,orderedArrays);
+            return search(low,high-1,orderedArrays);
         }else if(orderedArrays[mid] < targetNum){
             low = mid;
-            pos = search(low,high,orderedArrays);
+            return search(low+1,high,orderedArrays);
         }else{
             return mid;
         }
-        return pos;
     }
 
     /**
@@ -76,6 +75,23 @@ public class BinarySearch extends BaseArray{
         }
         //3.合并结果. 拿到执行结果后，应该做合并操作。这里不用合并，直接返回结果。
         return result;
+    }
+
+    public static int search3(int[] array, int targetNum, int low, int high){
+        if(array == null || array.length == 0){
+            return -1;
+        }
+        while(low <= high){
+            int mid = (low + high)/2;
+            if(array[mid] > targetNum){
+                high = mid - 1;
+            }else if(array[mid] < targetNum){
+                low = mid + 1;
+            }else{
+                return mid;
+            }
+        }
+        return -1;
     }
 
 
